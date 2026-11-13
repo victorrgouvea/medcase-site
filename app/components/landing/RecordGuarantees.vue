@@ -15,11 +15,11 @@ const facts = [
       <SectionHeading
         class="mb-12 max-w-160"
         title="O prontuário fica guardado como a lei pede"
-        description="A Resolução CFM 1.821/2007 e a Lei 13.787/2018 exigem guarda por 20 anos. O MedCase foi desenhado para isso."
+        description="A Resolução CFM 1.821/2007 e a Lei 13.787/2018 exigem guarda por 20 anos. O GestoClin foi desenhado para isso."
       />
       <div class="grid grid-cols-1 gap-7 md:grid-cols-2 md:gap-x-16 md:gap-y-10">
         <div v-for="fact in facts" :key="fact.title" class="grid grid-cols-[44px_minmax(0,1fr)] gap-4">
-          <div class="grid size-11 place-items-center rounded-xl bg-type-first-soft text-primary">
+          <div class="grid size-11 place-items-center rounded-xl bg-brand-green-soft text-brand-green-ink">
             <component :is="fact.icon" class="size-5.5" aria-hidden="true" />
           </div>
           <div>

@@ -12,13 +12,13 @@ export default defineNuxtConfig({
   vite: { plugins: [tailwindcss()] },
   app: {
     head: {
-      title: 'MedCase, agenda e prontuário para clínicas',
+      title: 'GestoClin, agenda e prontuário para clínicas',
       htmlAttrs: { lang: 'pt-BR' },
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         { name: 'description', content: 'Agenda, prontuário eletrônico e equipe da clínica num só lugar. Funciona no navegador do celular, do tablet e do computador.' },
-        { name: 'theme-color', content: '#F3F5F4' },
-        { property: 'og:title', content: 'MedCase' },
+        { name: 'theme-color', content: '#F4F7FA' },
+        { property: 'og:title', content: 'GestoClin' },
         { property: 'og:description', content: 'Agenda, prontuário e equipe da clínica num só lugar.' },
         { property: 'og:type', content: 'website' },
       ],
@@ -26,7 +26,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/svg+xml', href: 'favicon.svg' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600;700;800&display=swap' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap' },
       ],
     },
   },

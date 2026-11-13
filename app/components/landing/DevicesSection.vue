@@ -2,7 +2,7 @@
 // Sketch of a screen: a title bar and a few rows, drawn with gradients.
 const screen = `background:
   linear-gradient(var(--primary), var(--primary)) 12px 14px / 40% 6px no-repeat,
-  repeating-linear-gradient(#fff 0 10px, var(--type-first-soft) 10px 20px, #fff 20px 26px) 12px 30px / calc(100% - 24px) 52% no-repeat,
+  repeating-linear-gradient(#fff 0 10px, var(--brand-green-soft) 10px 20px, #fff 20px 26px) 12px 30px / calc(100% - 24px) 52% no-repeat,
   var(--card)`
 
 const devices = [
@@ -19,7 +19,7 @@ const devices = [
         <div
           v-for="d in devices"
           :key="d.label"
-          :class="['grid place-items-end justify-center border-2 border-ink pb-2.5 text-[11px] text-muted-foreground sm:text-[13px]', d.class]"
+          :class="['grid place-items-end justify-center border-2 border-primary pb-2.5 text-[11px] text-muted-foreground sm:text-[13px]', d.class]"
           :style="screen"
         >
           {{ d.label }}
@@ -27,7 +27,7 @@ const devices = [
       </div>
       <div>
         <SectionHeading title="Abre no aparelho que estiver à mão">
-          O MedCase é um site. A recepção usa no computador do balcão, o médico confere a agenda no celular entre um paciente e outro.
+          O GestoClin é um site. A recepção usa no computador do balcão, o médico confere a agenda no celular entre um paciente e outro.
         </SectionHeading>
         <ul class="mt-4.5 list-disc pl-5 text-muted-foreground">
           <li class="my-1.5">Sem app de loja para instalar ou atualizar</li>

@@ -1,27 +1,28 @@
 @import "tailwindcss";
 
-/* Same tokens as the platform (Medcase/app/assets/css/main.css), so shared components look identical. */
+/* GestoClin palette (docs/brand/gestoclin-cores.png). Token names match the platform's main.css,
+   so shadcn components copied between the two projects keep working. */
 :root {
   --radius: 0.75rem;
-  --background: #f3f5f4;
-  --foreground: #16211f;
+  --background: #f4f7fa;
+  --foreground: #0f2236;
   --card: #ffffff;
-  --card-foreground: #16211f;
-  --primary: #1f5c55;
-  --primary-hover: #16433e;
-  --primary-deep: #123b37;
+  --card-foreground: #0f2236;
+  --primary: #003760;
+  --primary-hover: #002b50;
+  --primary-deep: #002b50;
   --primary-foreground: #ffffff;
-  --secondary: #e3e8e6;
-  --secondary-foreground: #16211f;
-  --muted: #eef2f0;
-  --muted-foreground: #5a6764;
-  --subtle-foreground: #6b7875;
-  --accent: #e8efed;
-  --accent-foreground: #16211f;
+  --secondary: #e4eaf1;
+  --secondary-foreground: #0f2236;
+  --muted: #edf1f5;
+  --muted-foreground: #526175;
+  --subtle-foreground: #64748b;
+  --accent: #e8eef5;
+  --accent-foreground: #0f2236;
   --destructive: #9b1c14;
-  --border: #dde3e1;
-  --input: #cbd3d0;
-  --ring: #1f5c55;
+  --border: #dfe5ec;
+  --input: #c9d3de;
+  --ring: #00ae8f;
   --now: #c2410c;
   --arrival: #7a4306;
   --arrival-soft: #fbebd3;
@@ -33,10 +34,15 @@
   --type-postop-soft: #fbefd9;
   --type-procedure: #4c2a93;
   --type-procedure-soft: #eee8fa;
-  --ink-strong: #16211f;
+  --ink-strong: #0f2236;
+  /* Brand green: #00ae8f for marks, large shapes and fills; -ink for green text and icons on light surfaces. */
+  --brand-green: #00ae8f;
+  --brand-green-ink: #007a65;
+  --brand-green-soft: #e3f6f2;
 }
 
 @theme inline {
+  --font-display: "Montserrat", system-ui, sans-serif;
   --font-sans: "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -69,6 +75,9 @@
   --color-type-procedure: var(--type-procedure);
   --color-type-procedure-soft: var(--type-procedure-soft);
   --color-ink: var(--ink-strong);
+  --color-brand-green: var(--brand-green);
+  --color-brand-green-ink: var(--brand-green-ink);
+  --color-brand-green-soft: var(--brand-green-soft);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -84,6 +93,7 @@
     line-height: 1.55;
   }
   :focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--font-display); color: var(--primary); }
   .tabular { font-variant-numeric: tabular-nums; }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }

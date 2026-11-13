@@ -36,7 +36,7 @@ const roles = [
                 </th>
                 <td v-for="(allowed, i) in role.access" :key="i" class="border-b p-3.5 text-center">
                   <span
-                    :class="['inline-grid size-7 place-items-center rounded-full', allowed ? 'bg-type-first-soft text-primary' : 'bg-muted text-subtle-foreground']"
+                    :class="['inline-grid size-7 place-items-center rounded-full', allowed ? 'bg-brand-green-soft text-brand-green-ink' : 'bg-muted text-subtle-foreground']"
                   >
                     <component :is="allowed ? Check : Minus" class="size-3.5" :stroke-width="3" aria-hidden="true" />
                     <span class="sr-only">{{ allowed ? 'Sim' : 'Não' }}</span>

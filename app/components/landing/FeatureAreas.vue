@@ -28,17 +28,17 @@ const areas = [
         title="Feito para o dia a dia de um consultório"
         description="Do horário marcado ao atendimento finalizado, tudo fica ligado ao mesmo paciente."
       />
-      <div class="grid grid-cols-1 lg:grid-cols-3 lg:border-t-2 lg:border-ink">
+      <div class="grid grid-cols-1 lg:grid-cols-3 lg:border-t-2 lg:border-primary">
         <div
           v-for="(area, i) in areas"
           :key="area.title"
-          :class="['border-t-2 border-ink pt-7 pb-3 lg:border-t-0 lg:pb-2', i > 0 ? 'lg:border-l lg:border-l-border lg:pl-8' : '', i < areas.length - 1 ? 'lg:pr-8' : '']"
+          :class="['border-t-2 border-primary pt-7 pb-3 lg:border-t-0 lg:pb-2', i > 0 ? 'lg:border-l lg:border-l-border lg:pl-8' : '', i < areas.length - 1 ? 'lg:pr-8' : '']"
         >
           <h3 class="mb-2.5 text-[22px] font-bold tracking-tight">{{ area.title }}</h3>
           <p class="mb-4.5 text-muted-foreground">{{ area.description }}</p>
           <ul class="m-0 list-none p-0">
             <li v-for="item in area.items" :key="item" class="flex gap-3 border-t py-2.5 text-base">
-              <Check class="mt-1 size-4 shrink-0 text-primary" :stroke-width="2.5" aria-hidden="true" />
+              <Check class="mt-1 size-4 shrink-0 text-brand-green-ink" :stroke-width="2.5" aria-hidden="true" />
               {{ item }}
             </li>
           </ul>

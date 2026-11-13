@@ -1,6 +1,23 @@
+<!--
+  GestoClin symbol, redrawn as SVG from docs/brand/gestoclin-simbolo.webp so it stays sharp
+  and has no white box. The swoosh gets a stroke in --mark-gap (the surface color behind it)
+  to cut the same gaps through the cross as the original artwork.
+-->
 <template>
-  <svg viewBox="0 0 64 64" aria-hidden="true">
-    <rect width="64" height="64" rx="16" fill="currentColor" />
-    <path d="M27 14h10v13h13v10H37v13H27V37H14V27h13z" fill="#fff" />
+  <svg viewBox="215 225 830 810" aria-hidden="true">
+    <g fill="none" stroke-width="72">
+      <path
+        stroke="#003760"
+        d="M800 452 V333 Q800 269 736 269 H548 Q484 269 484 333 V448 Q484 490 442 490 H333 Q262 490 262 561 V705 Q262 786 343 786 H492"
+      />
+      <path stroke="#00AE8F" d="M484 860 V922 Q484 988 550 988 H734 Q800 988 800 922 V790" />
+    </g>
+    <path
+      fill="#00AE8F"
+      stroke="var(--mark-gap, #fff)"
+      stroke-width="22"
+      paint-order="stroke"
+      d="M255 843 C560 838 950 720 1022 590 C1058 520 975 470 822 463 C930 482 980 530 950 585 C880 700 560 820 255 843 Z"
+    />
   </svg>
 </template>

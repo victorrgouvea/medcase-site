@@ -1,6 +1,6 @@
-# MedCase, site
+# GestoClin, site
 
-Landing page do MedCase. Mesma stack da plataforma (Nuxt 4, Vue 3, TypeScript, Tailwind 4, shadcn-nuxt), gerada como site estático e publicada no GitHub Pages. Os botões "Entrar" levam para a plataforma (`runtimeConfig.public.platformUrl` em `nuxt.config.ts`).
+Landing page do GestoClin (gestoclin.com). Mesma stack da plataforma (Nuxt 4, Vue 3, TypeScript, Tailwind 4, shadcn-nuxt), gerada como site estático e publicada no GitHub Pages. Os botões "Entrar" levam para a plataforma (`runtimeConfig.public.platformUrl` em `nuxt.config.ts`).
 
 ## Rodar localmente
 

@@ -13,7 +13,7 @@ const loginUrl = usePlatformUrl('/entrar')
       </p>
       <div class="flex flex-wrap gap-3">
         <Button as="a" :href="loginUrl" size="lg" class="w-full sm:w-auto">Entrar na plataforma</Button>
-        <Button as="a" href="#recursos" size="lg" variant="outline" class="w-full bg-transparent text-primary sm:w-auto">
+        <Button as="a" href="#recursos" size="lg" variant="outline" class="w-full border-[#b6c4d3] bg-transparent text-primary sm:w-auto">
           Ver o que dá para fazer
         </Button>
       </div>
