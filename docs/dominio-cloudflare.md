@@ -1,6 +1,6 @@
 # Domínio gestoclin.com na Cloudflare
 
-Plano: `gestoclin.com` (e `www`) servem a landing pelo GitHub Pages; `app.gestoclin.com` vai servir a plataforma na Vercel.
+Plano: `gestoclin.com` (e `www`) servem a landing pelo GitHub Pages; `app.gestoclin.com` serve a plataforma no Cloudflare Workers.
 
 ## 1. Registros DNS
 
