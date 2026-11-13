@@ -23,3 +23,11 @@ app/assets/css/main.css        tokens de cor e fonte, iguais aos da plataforma
 ```
 
 Para trazer outro componente shadcn da plataforma, copie a pasta de `Medcase/app/components/ui/<nome>` para cá. Se mudar um token de cor num lado, mude no outro.
+
+## Prévia de link (WhatsApp, LinkedIn...)
+
+As tags `og:*` ficam em `nuxt.config.ts`. A imagem `public/og-image.png` (1200x630) é gerada a partir de `docs/og/og-image.html`:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --force-device-scale-factor=1 --window-size=1200,630 --virtual-time-budget=5000 --screenshot=public/og-image.png "file://$PWD/docs/og/og-image.html"
+```
