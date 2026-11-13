@@ -55,7 +55,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       // Where every "Entrar" button points.
-      platformUrl: 'https://medcase.vercel.app',
+      platformUrl: 'https://app.gestoclin.com',
     },
   },
   typescript: { strict: true, typeCheck: false },
