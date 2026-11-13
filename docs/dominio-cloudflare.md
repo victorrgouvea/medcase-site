@@ -1,10 +1,10 @@
-# Domínio gestoclean.com na Cloudflare
+# Domínio gestoclin.com na Cloudflare
 
-Plano: `gestoclean.com` (e `www`) servem a landing pelo GitHub Pages; `app.gestoclean.com` vai servir a plataforma na Vercel.
+Plano: `gestoclin.com` (e `www`) servem a landing pelo GitHub Pages; `app.gestoclin.com` vai servir a plataforma na Vercel.
 
 ## 1. Registros DNS
 
-Cloudflare, gestoclean.com, **DNS, Records**. Em todos, "Proxy status" em **DNS only** (nuvem cinza).
+Cloudflare, gestoclin.com, **DNS, Records**. Em todos, "Proxy status" em **DNS only** (nuvem cinza).
 
 Landing (GitHub Pages):
 
@@ -30,7 +30,7 @@ Por que DNS only: GitHub e Vercel emitem o certificado HTTPS sozinhos e precisam
 
 ## 2. Verificar o domínio no GitHub (evita que alguém sequestre o domínio)
 
-GitHub, foto do perfil, **Settings, Pages, Add a domain**, digite `gestoclean.com`. O GitHub mostra um registro TXT (`_github-pages-challenge-victorrgouvea`). Crie esse TXT na Cloudflare e clique em Verify. Depois disso, nenhum outro repositório do GitHub consegue usar o seu domínio.
+GitHub, foto do perfil, **Settings, Pages, Add a domain**, digite `gestoclin.com`. O GitHub mostra um registro TXT (`_github-pages-challenge-victorrgouvea`). Crie esse TXT na Cloudflare e clique em Verify. Depois disso, nenhum outro repositório do GitHub consegue usar o seu domínio.
 
 ## 3. Segurança básica na Cloudflare
 
@@ -38,32 +38,32 @@ Faça agora:
 
 - **Duas etapas na conta da Cloudflare** (My Profile, Authentication). Quem entra na conta controla o domínio inteiro, inclusive o app e os e-mails.
 - **DNSSEC**: DNS, Settings, Enable DNSSEC. Como o domínio foi comprado na Cloudflare, ela publica o registro DS sozinha. Impede que alguém falsifique as respostas de DNS do domínio.
-- **Renovação automática**: Domain Registration, Manage domains, gestoclean.com, Auto-renew ligado. Perder o domínio por esquecimento é o risco mais comum.
+- **Renovação automática**: Domain Registration, Manage domains, gestoclin.com, Auto-renew ligado. Perder o domínio por esquecimento é o risco mais comum.
 - **Transfer lock**: na mesma tela, confirme que está "Locked" (vem ligado). Impede transferência do domínio sem você.
-- **Bloquear e-mail falso em nome do domínio** (enquanto vocês não mandam e-mail com @gestoclean.com):
+- **Bloquear e-mail falso em nome do domínio** (enquanto vocês não mandam e-mail com @gestoclin.com):
 
   | Tipo | Nome | Conteúdo |
   |---|---|---|
   | TXT | `@` | `v=spf1 -all` |
   | TXT | `_dmarc` | `v=DMARC1; p=reject;` |
 
-  Sem isso, qualquer um consegue mandar e-mail "de" contato@gestoclean.com. Quando forem enviar e-mail de verdade (convites e recuperação de senha do app pelo Supabase, com Resend ou parecido), esses dois registros são trocados pelos que o serviço de envio indicar.
+  Sem isso, qualquer um consegue mandar e-mail "de" contato@gestoclin.com. Quando forem enviar e-mail de verdade (convites e recuperação de senha do app pelo Supabase, com Resend ou parecido), esses dois registros são trocados pelos que o serviço de envio indicar.
 
 Opcional, útil:
 
-- **Email Routing** (Email, Email Routing): recebe `contato@gestoclean.com` e encaminha para um Gmail, de graça. Ele cria registros MX e SPF próprios; aí o SPF acima passa a ser o que a Cloudflare sugerir.
+- **Email Routing** (Email, Email Routing): recebe `contato@gestoclin.com` e encaminha para um Gmail, de graça. Ele cria registros MX e SPF próprios; aí o SPF acima passa a ser o que a Cloudflare sugerir.
 - **Notifications**: ative os avisos de expiração do domínio e de mudança de DNS.
 
 Não precisa mexer agora: WAF, Bot Fight Mode, cache, Page Rules. Eles só valem para registros com a nuvem laranja.
 
 ## 4. Depois que o DNS estiver no ar
 
-1. GitHub, repositório medcase-site, **Settings, Pages, Custom domain**: `gestoclean.com`, Save. (Ou pelo `gh`, ver abaixo.)
+1. GitHub, repositório medcase-site, **Settings, Pages, Custom domain**: `gestoclin.com`, Save. (Ou pelo `gh`, ver abaixo.)
 2. Esperar o check de DNS ficar verde e o certificado sair (de minutos a algumas horas).
 3. Marcar **Enforce HTTPS**.
 
 ```bash
-gh api -X PUT repos/victorrgouvea/medcase-site/pages -f cname=gestoclean.com
+gh api -X PUT repos/victorrgouvea/medcase-site/pages -f cname=gestoclin.com
 gh api -X PUT repos/victorrgouvea/medcase-site/pages -F https_enforced=true
 ```
 
