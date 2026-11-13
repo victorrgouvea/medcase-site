@@ -42,8 +42,10 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'canonical', href: `${siteUrl}/` },
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        // ?v= busts the browser's favicon cache when the icon changes.
+        { rel: 'icon', href: '/favicon.ico?v=2', sizes: '32x32' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg?v=2' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png?v=2' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap' },
