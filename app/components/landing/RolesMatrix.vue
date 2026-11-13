@@ -18,8 +18,8 @@ const roles = [
         A recepção cuida da agenda e do cadastro, mas não abre o conteúdo clínico. O médico lê o prontuário dos pacientes que acompanha. As regras valem no banco de dados, não só na tela.
       </SectionHeading>
 
-      <div>
-        <div class="overflow-x-auto">
+      <div class="min-w-0">
+        <div class="relative overflow-x-auto">
           <table class="w-full min-w-140 border-collapse text-base">
             <caption class="pb-3 text-left text-sm text-muted-foreground">Permissões por papel na clínica</caption>
             <thead>
