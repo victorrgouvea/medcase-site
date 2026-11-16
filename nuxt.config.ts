@@ -34,7 +34,7 @@ export default defineNuxtConfig({
         { property: 'og:image:type', content: 'image/png' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { property: 'og:image:alt', content: 'GestoClin: a clínica inteira no mesmo prontuário.' },
+        { property: 'og:image:alt', content: 'GestoClin: a clínica inteira no mesmo lugar.' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: title },
         { name: 'twitter:description', content: description },
