@@ -8,7 +8,7 @@ withDefaults(defineProps<{ compact?: boolean, inverted?: boolean }>(), { compact
   <span class="inline-flex items-center" :class="compact ? 'gap-2.5' : 'gap-4'">
     <BrandMark
       :class="compact ? 'size-10' : 'size-14'"
-      :style="{ '--mark-gap': inverted ? 'var(--primary-deep)' : 'var(--background)' }"
+      :style="{ '--mark-gap': inverted ? 'var(--primary-deep)' : 'var(--background)', '--mark-ink': inverted ? '#ffffff' : '#003760' }"
     />
     <span v-if="!compact" class="h-12 w-px bg-input" aria-hidden="true" />
     <span class="flex flex-col">

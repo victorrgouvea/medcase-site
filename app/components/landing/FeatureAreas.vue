@@ -4,29 +4,29 @@ import { Check } from 'lucide-vue-next'
 const areas = [
   {
     title: 'Agenda',
-    description: 'Uma agenda por profissional, com o andamento de cada paciente na sala de espera.',
-    items: ['Dois horários no mesmo intervalo são bloqueados', 'Agendado, confirmado, chegou, em atendimento', 'Faltas e cancelamentos ficam no histórico'],
+    description: 'Uma agenda por profissional, com o andamento de cada paciente e manejo da sala de espera.',
+    items: ['Agenda organizada, sem dois pacientes no mesmo horário', 'Confirmação da consulta e aviso de que o paciente chegou', 'Visão do dia ou da semana inteira', 'Faltas e cancelamentos ficam no histórico'],
   },
   {
     title: 'Prontuário',
     description: 'Anotação do atendimento, receitas, pedidos de exame e anexos do paciente.',
-    items: ['Alergias e alertas sempre à vista', 'Receitas e pedidos prontos para imprimir', 'Atendimento finalizado só recebe adendos'],
+    items: ['Alergias e alertas sempre à vista', 'Rascunho salvo sozinho enquanto você escreve', 'Receitas e pedidos prontos para imprimir', 'Notas e adendos mesmo depois do atendimento finalizado'],
   },
   {
     title: 'Equipe',
-    description: 'Convide médicos e recepção por e-mail ou por um link no WhatsApp.',
-    items: ['Tarefas entre recepção e médicos', 'Um médico pode atender em mais de uma clínica', 'Verificação em duas etapas, se a clínica exigir'],
+    description: 'Convide profissionais de saúde e recepção por e-mail ou por um link no WhatsApp.',
+    items: ['Tarefas entre recepção e profissionais', 'Cada paciente com a sua equipe de cuidado', 'Gerencie todo o seu corpo clínico em um só lugar', 'Verificação em duas etapas, se a clínica exigir'],
   },
 ]
 </script>
 
 <template>
-  <section id="recursos" class="py-16 lg:py-22">
+  <section id="recursos" class="scroll-mt-17 border-y bg-card py-16 lg:py-24">
     <div class="mx-auto max-w-290 px-4 sm:px-6">
       <SectionHeading
         class="mb-12 max-w-160"
-        title="Feito para o dia a dia de um consultório"
-        description="Do horário marcado ao atendimento finalizado, tudo fica ligado ao mesmo paciente."
+        title="Feito para o dia a dia de uma clínica"
+        description="Do horário marcado ao atendimento finalizado, tudo ao seu alcance."
       />
       <div class="grid grid-cols-1 lg:grid-cols-3 lg:border-t-2 lg:border-primary">
         <div
@@ -44,6 +44,7 @@ const areas = [
           </ul>
         </div>
       </div>
+
     </div>
   </section>
 </template>

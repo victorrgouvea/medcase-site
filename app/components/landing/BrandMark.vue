@@ -7,7 +7,7 @@
   <svg viewBox="215 225 830 810" aria-hidden="true">
     <g fill="none" stroke-width="72">
       <path
-        stroke="#003760"
+        stroke="var(--mark-ink, #003760)"
         d="M800 452 V333 Q800 269 736 269 H548 Q484 269 484 333 V448 Q484 490 442 490 H333 Q262 490 262 561 V705 Q262 786 343 786 H492"
       />
       <path stroke="#00AE8F" d="M484 860 V922 Q484 988 550 988 H734 Q800 988 800 922 V790" />
