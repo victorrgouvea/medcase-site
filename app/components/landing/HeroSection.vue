@@ -28,7 +28,7 @@ const loginUrl = usePlatformUrl('/entrar')
           </Button>
         </div>
         <p class="rise-in mt-5.5 text-[15px] text-[#a9bfd3]" style="--i: 3">
-          Ainda não usa o GestoClin? <a href="#contato" class="font-semibold text-white underline decoration-brand-green decoration-2 underline-offset-4">Peça um orçamento</a>.
+          Ainda não usa o GestoClin? <a href="#preco" class="font-semibold text-white underline decoration-brand-green decoration-2 underline-offset-4">Veja o plano e o preço</a>.
         </p>
       </div>
 

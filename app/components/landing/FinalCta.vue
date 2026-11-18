@@ -27,12 +27,12 @@ async function copyEmail() {
             Quer o GestoClin na sua clínica?
           </h2>
           <p class="m-0 max-w-[48ch] text-lg text-[#b8ccdd]">
-            Escreva contando o tamanho da sua equipe. A gente responde por e-mail para conversar e montar um orçamento.
+            Escreva contando sobre a sua clínica. A gente responde por e-mail e envia o link para você criar a conta.
           </p>
         </div>
         <div class="grid gap-3 lg:justify-items-end">
           <Button as="a" :href="contactMailto" size="lg" class="w-full bg-brand-green text-primary-deep hover:bg-[#00c4a1] lg:w-auto">
-            <Mail aria-hidden="true" /> Pedir orçamento por e-mail
+            <Mail aria-hidden="true" /> Falar com a gente por e-mail
           </Button>
           <button
             type="button"

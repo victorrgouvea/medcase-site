@@ -7,6 +7,7 @@
     <RolesMatrix />
     <RecordGuarantees />
     <DevicesSection />
+    <PricingSection />
     <FaqSection />
     <FinalCta />
   </main>
